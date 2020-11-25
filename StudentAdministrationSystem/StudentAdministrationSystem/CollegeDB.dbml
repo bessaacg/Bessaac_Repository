@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CollegeDB" Class="CollegeDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CollegeDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="StudentAdministrationSystem.Properties.Settings" SettingsPropertyName="CollegeDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date_Of_Birth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Student_Transaction" Member="Transactions" ThisKey="Student_Number" OtherKey="Student_Number" Type="Transaction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transactions" Member="Transactions">
+    <Type Name="Transaction">
+      <Column Name="Reference_Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Transaction_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Transaction_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Transaction_Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Reversal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Student_Transaction" Member="Student" ThisKey="Student_Number" OtherKey="Student_Number" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="Pin" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.QueryAllStudents" Method="QueryAllStudents">
+    <ElementType Name="QueryAllStudentsResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryByFirstname" Method="QueryByFirstname">
+    <Parameter Name="fname" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryByFirstnameResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryByGender" Method="QueryByGender">
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryByGenderResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryByMiddlename" Method="QueryByMiddlename">
+    <Parameter Name="mname" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryByMiddlenameResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryByStudentNumber" Method="QueryByStudentNumber">
+    <Parameter Name="stdNum" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryByStudentNumberResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryBySurname" Method="QueryBySurname">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryBySurnameResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryByYear" Method="QueryByYear">
+    <Parameter Name="year" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryByYearResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.QueryByCourse" Method="QueryByCourse">
+    <Parameter Name="course" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="QueryByCourseResult">
+      <Column Name="Student_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Registration_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Course_Fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Payment_Insert" Method="Payment_Insert">
+    <Parameter Name="RefNum" Parameter="refNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StdNum" Parameter="stdNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TDate" Parameter="tDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TName" Parameter="tName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TPaid" Parameter="tPaid" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Bal" Parameter="bal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TAmount" Parameter="tAmount" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ReversePayment" Method="ReversePayment">
+    <Parameter Name="RefNum" Parameter="refNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StdNum" Parameter="stdNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TDate" Parameter="tDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TName" Parameter="tName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TPaid" Parameter="tPaid" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Bal" Parameter="bal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TAmount" Parameter="tAmount" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

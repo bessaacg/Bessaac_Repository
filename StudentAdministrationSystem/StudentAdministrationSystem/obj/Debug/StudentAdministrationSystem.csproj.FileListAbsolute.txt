@@ -1,0 +1,49 @@
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\StudentAdministrationSystem.exe
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\StudentAdministrationSystem.pdb
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FormLogin.resources
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Properties.Resources.resources
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.csproj.GenerateResource.Cache
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.exe
+c:\users\bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.pdb
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Menu.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FormRegistration1.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FormRegistration2.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Payments.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Reversals.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Transact.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\StudentAdministrationSystem.exe.config
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.exe
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.pdb
+G:\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\StudentAdministrationSystem.exe
+G:\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\StudentAdministrationSystem.pdb
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FormRegistration1.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FormRegistration2.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Reversals.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Payments.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Transact.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FormLogin.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Menu.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Properties.Resources.resources
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.csproj.GenerateResource.Cache
+G:\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.csprojResolveAssemblyReference.cache
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.Reports.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.FeeCollectionReport.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\RdlCompile.cache
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\RdlCompile.compiled
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.TrackingSheetForm.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.ReceiptSummaryForm.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.QualificationListForm.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.QueryForm.resources
+C:\Users\Bizzy\documents\visual studio 2015\Projects\StudentAdministrationSystem\StudentAdministrationSystem\obj\Debug\StudentAdministrationSystem.PinBox.resources
